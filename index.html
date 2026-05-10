@@ -262,10 +262,11 @@
             <div class="editor-dot"></div>
           </div>
 
-<pre>
-<div class EventStreamCoordinator {
+<script>
+  
+class EventStreamCoordinator {
 
-  constructor({ maxWorkers = 4 }) {
+  constructor({ maxWorkers = 4 } = {}) {
 
     this.maxWorkers = maxWorkers;
 
@@ -275,6 +276,7 @@
     this.cache = new Map();
   }
 
+}
   push(payload) {
 
     if (!payload || !payload.id) {
@@ -376,7 +378,7 @@
   }
 
 }
-</pre>
+</script>
 
         </div>
 
